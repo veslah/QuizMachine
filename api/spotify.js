@@ -1,5 +1,3 @@
-if (process.env.NODE_ENV !== 'production') {
-	import('dotenv').then((module) => module.config());
-}
-
-console.log('it might work');
+export default (req, res) => {
+	res.status(200).send(process.env.spotify_client_id);
+};
